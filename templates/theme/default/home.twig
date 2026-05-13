@@ -1,21 +1,152 @@
 {% extends '@theme/layout.twig' %}
 
-{% block content %}
-<div class="wrap">
-    <h1>{{ site.name }}</h1>
-    <p class="lede">Welcome. This is your new Pebblestack site. Edit this page in the admin to make it your own — or create a Page with the slug <code>home</code> to replace this entirely.</p>
+{% block title %}Maspes Piante e Fiori — Fiori di Como, dal 1954{% endblock %}
+{% block header_class %}{% endblock %} {# transparent header over hero #}
 
-    {% if recent_posts|length > 0 %}
-        <h2>Latest writing</h2>
-        {% for post in recent_posts %}
-            <a class="post-card" href="/blog/{{ post.slug }}">
-                <h2>{{ post.field('title', '(untitled)') }}</h2>
-                <div class="date">{{ (post.publishAt ?? post.createdAt)|date('F j, Y') }}</div>
-                {% if post.field('excerpt') %}
-                    <p>{{ post.field('excerpt') }}</p>
-                {% endif %}
+{% block content %}
+
+{# ============================== HERO ============================== #}
+<section class="hero-split" aria-label="Maspes Piante e Fiori — Fiori di Como, dal 1954">
+    <div class="photo" aria-hidden="true">
+        <img src="/uploads/hero/wet_rose_bouquet__unsplash__jpg.jpg"
+             alt=""
+             loading="eager"
+             decoding="async">
+    </div>
+    <div class="copy">
+        <p class="eyebrow on-dark">Atelier floreale · Como</p>
+        <h1 class="display">Fiori di&nbsp;Como, dal&nbsp;1954.</h1>
+        <p class="subhead">Tre generazioni della famiglia Maspes a Via Leone Leoni. Rose, orchidee, composizioni su misura — consegna a Como e provincia.</p>
+        <div class="cta-row">
+            <a href="tel:+39031271136" class="btn btn-primary">Chiamaci<span class="arrow" aria-hidden="true">→</span></a>
+            <span class="phone-line"><a href="tel:+39031271136">031 27 11 36</a></span>
+        </div>
+    </div>
+    <div class="hero-rule" aria-hidden="true">
+        <span class="line"></span>
+        <span class="mark">
+            {# arched-window mark — brief reference 00 motif #}
+            <svg width="40" height="48" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M2 47V20a18 18 0 0 1 36 0v27" stroke-linecap="round"/>
+                <path d="M20 2v45M2 32h36" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span class="line"></span>
+    </div>
+</section>
+
+{# ============================== HERITAGE ============================== #}
+<section class="section surface-avorio">
+    <div class="container">
+        <div class="split-50">
+            <div class="copy reveal">
+                <p class="eyebrow on-light">Dal 1954</p>
+                <h2>Tre generazioni dietro lo stesso banco.</h2>
+                <p>Maspes Piante e Fiori apre in Via Leone Leoni nel 1954. Da allora le mani sono cambiate — il mestiere no. Selezioniamo ogni fiore con cura, raccontiamo ogni composizione, e siamo per i clienti di Como il fiorista di fiducia da settant'anni.</p>
+                <p>Veniteci a trovare in negozio o telefonate: per i lavori più importanti preferiamo sempre prima ascoltarvi.</p>
+                <p><a class="link-brass" href="/visitaci">Visitaci a Como <span aria-hidden="true">→</span></a></p>
+            </div>
+            <div class="photo reveal">
+                <img src="/uploads/composizioni/dark_rose_close_up_jpg.jpg"
+                     alt="Petali di rosa scuri fotografati in penombra — dettaglio di una composizione Maspes."
+                     loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============================== SIGNATURE THREE-UP ============================== #}
+<section class="section surface-bosco">
+    <div class="container">
+        <p class="eyebrow on-dark center">Le nostre composizioni</p>
+        <h2 class="center" style="max-width: 22ch; margin-inline: auto;">Tre famiglie di lavori, una sola misura: la cura.</h2>
+        <div class="three-up">
+            <a class="card reveal" href="/composizioni">
+                <div class="frame"><img
+                    src="/uploads/hero/crimson_bouquet__50703702043__jpg.jpg"
+                    alt="Rosa rossa aperta, dettaglio macro su sfondo verde scuro."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Rose</span>
+                <h3>Rose rosse, da una a cento.</h3>
+                <span class="vedi">Vedi le rose <span class="arrow" aria-hidden="true">→</span></span>
             </a>
-        {% endfor %}
-    {% endif %}
-</div>
+            <a class="card offset reveal" href="/composizioni">
+                <div class="frame"><img
+                    src="/uploads/composizioni/orchid_2021_001_phalaenopsis_amabilis_blume_jpg.jpg"
+                    alt="Orchidea Phalaenopsis bianca in un vaso di terracotta brunita."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Piante</span>
+                <h3>Orchidee &amp; piante da interno.</h3>
+                <span class="vedi">Vedi le piante <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a class="card reveal" href="/composizioni">
+                <div class="frame"><img
+                    src="/uploads/composizioni/anna_maria_janssens_or_jan_brueghel_the_younger__workshop___.jpg"
+                    alt="Bouquet misto in stile fiammingo, peonie, lilium e tulipani, fotografato su sfondo scuro."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Bouquet</span>
+                <h3>Bouquet d'autore.</h3>
+                <span class="vedi">Vedi i bouquet <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{# ============================== SU MISURA TEASER ============================== #}
+<section class="section surface-avorio compact" aria-label="Composizioni su misura">
+    <div class="container">
+        <div class="teaser-wide">
+            <div class="photo reveal">
+                <img src="/uploads/wedding/church_on_the_morning_of_the_wedding__unsplash__jpg.jpg"
+                     alt="Bouquet preparato a mano poggiato su una panca in legno scuro — atmosfera intima di chiesa." loading="lazy" decoding="async">
+            </div>
+            <div class="copy reveal">
+                <p class="eyebrow on-light">Su misura</p>
+                <h2>Per il giorno che conta, una composizione pensata per voi.</h2>
+                <p>Matrimoni, eventi, hotel, ristoranti. Ascoltiamo l'occasione, disegniamo la proposta, consegniamo a Como e provincia.</p>
+                <a href="/su-misura" class="btn btn-secondary">Richiedi una composizione <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============================== TESTIMONIANZE ============================== #}
+<section class="section surface-bosco">
+    <div class="container">
+        <p class="eyebrow on-dark center">Dicono di noi</p>
+        <h2 class="center" style="max-width:20ch; margin-inline:auto;">Le parole dei clienti.</h2>
+        <div class="testimonials">
+            <blockquote class="testimonial reveal">
+                <p>Il fiorista top di Como. Se volete la qualità, sia per richieste particolari che per una semplice rosa andate da Corrado: non vi deluderà.</p>
+                <cite>— Jacopo Zuppati</cite>
+            </blockquote>
+            <blockquote class="testimonial reveal">
+                <p>Fiori di rara bellezza e qualità. Personale gentilissimo.</p>
+                <cite>— Barbara Bertolini</cite>
+            </blockquote>
+            <blockquote class="testimonial reveal">
+                <p>Grande, grandissima professionalità e composizioni bellissime e raffinate.</p>
+                <cite>— Chiara Vincenzi</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+{# ============================== VISITACI STRIP ============================== #}
+<section class="section surface-avorio compact">
+    <div class="container">
+        <div class="visit-strip">
+            <div class="info">
+                <p class="eyebrow on-light">Posizione</p>
+                <h2>Via Leone Leoni 2, Como.</h2>
+                <p class="addr">Aperti oggi e tutti i giorni della settimana.</p>
+                <p class="today">Telefono: <strong><a href="tel:+39031271136" class="link-brass">031 27 11 36</a></strong></p>
+            </div>
+            <div class="cta-side">
+                <a href="/visitaci" class="btn btn-primary">Indicazioni <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

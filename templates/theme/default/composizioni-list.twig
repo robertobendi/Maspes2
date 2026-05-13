@@ -1,0 +1,79 @@
+{% extends '@theme/layout.twig' %}
+
+{% set active_page = 'composizioni' %}
+
+{% block title %}Composizioni — Maspes Piante e Fiori{% endblock %}
+{% block meta_description %}Le composizioni Maspes: rose, piante, bouquet e orchidee. Ogni pezzo è realizzato a mano in negozio a Como. Chiama lo 031 27 11 36 per ordinare.{% endblock %}
+
+{% block content %}
+
+{# ============================== HERO ============================== #}
+<section class="hero-editorial">
+    <div class="container">
+        <p class="eyebrow on-dark">Le composizioni</p>
+        <h1>Ogni fiore, una scelta.</h1>
+        <div class="rule-mark" aria-hidden="true">
+            <span class="line"></span>
+            <span class="mark">
+                <svg width="32" height="40" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M2 47V20a18 18 0 0 1 36 0v27" stroke-linecap="round"/>
+                    <path d="M20 2v45M2 32h36" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="line"></span>
+        </div>
+        <p>La lista che segue è una piccola parte di ciò che facciamo: rose tagliate fresche ogni mattina, piante scelte una a una, bouquet pensati per la persona che li riceverà. Per qualsiasi composizione fuori catalogo, chiamate il negozio.</p>
+    </div>
+</section>
+
+{# ============================== FILTER ROW ============================== #}
+<section class="surface-bosco" style="padding: 2.5rem 0;">
+    <div class="container">
+        <nav class="filter-row" aria-label="Filtri composizioni">
+            <a href="#tutti" aria-current="page">Tutti</a>
+            <a href="#rose">Rose</a>
+            <a href="#piante">Piante</a>
+            <a href="#bouquet">Bouquet</a>
+            <a href="#orchidee">Orchidee</a>
+            <a href="#composizioni">Composizioni</a>
+        </nav>
+    </div>
+</section>
+
+{# ============================== GRID ============================== #}
+<section class="surface-bosco" style="padding-bottom: var(--sec-lg);">
+    <div class="container">
+        <div class="compo-grid">
+            {% for item in entries %}
+                <article class="item reveal" id="{{ item.field('categoria') }}-{{ item.slug }}">
+                    <div class="frame">
+                        <img src="{{ item.field('immagine_url') }}"
+                             alt="{{ item.field('immagine_alt') }}"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">{{ item.field('title') }}</h2>
+                    <span class="price">
+                        {% if item.field('prezzo_fisso') %}€{{ item.field('prezzo_da') }}{% else %}Da €{{ item.field('prezzo_da') }}{% endif %}
+                    </span>
+                    {% if item.field('descrizione') %}
+                        <p class="descr">{{ item.field('descrizione') }}</p>
+                    {% endif %}
+                    <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# ============================== CLOSING BAND ============================== #}
+<section class="section surface-bosco compact" style="border-top: 1px solid var(--rule-bosco);">
+    <div class="container">
+        <div class="closing-band">
+            <p class="eyebrow on-dark">Non trovi quello che cerchi?</p>
+            <h2 style="color: var(--avorio);">Lo facciamo per te. Composizione su misura, mano nostra.</h2>
+            <a href="/su-misura" class="btn btn-secondary">Composizioni su misura <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

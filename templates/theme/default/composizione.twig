@@ -1,0 +1,28 @@
+{% extends '@theme/layout.twig' %}
+
+{% set active_page = 'composizioni' %}
+
+{% block title %}{{ entry.field('title') }} — Maspes Piante e Fiori{% endblock %}
+{% block meta_description %}{{ entry.field('descrizione')|slice(0, 160) }}{% endblock %}
+
+{% block content %}
+<section class="article">
+    <div class="container narrow">
+        <p class="eyebrow on-light">Composizione · {{ entry.field('categoria')|capitalize }}</p>
+        <h1>{{ entry.field('title') }}</h1>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); margin-top: 2.5rem;" class="split-on-mobile">
+            <div>
+                <img src="{{ entry.field('immagine_url') }}" alt="{{ entry.field('immagine_alt') }}" style="aspect-ratio: 3/4; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <p style="font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--ottone); margin-bottom: 1.5rem;">
+                    {% if entry.field('prezzo_fisso') %}€{{ entry.field('prezzo_da') }}{% else %}Da €{{ entry.field('prezzo_da') }}{% endif %}
+                </p>
+                <p>{{ entry.field('descrizione') }}</p>
+                <p style="margin-top: 2rem;"><a href="tel:+39031271136" class="btn btn-primary">Chiama per ordinare <span class="arrow" aria-hidden="true">→</span></a></p>
+                <p style="margin-top: 1.5rem;"><a class="link-brass" href="/composizioni">← Torna a tutte le composizioni</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

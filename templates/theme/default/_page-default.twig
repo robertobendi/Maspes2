@@ -1,0 +1,16 @@
+{% extends '@theme/layout.twig' %}
+{% set meta_description = entry.field('meta_description') %}
+
+{% block title %}{{ entry.field('title') }} — Maspes Piante e Fiori{% endblock %}
+
+{% block content %}
+<section class="article">
+    <div class="container narrow">
+        <p class="eyebrow on-light">{{ entry.field('title') }}</p>
+        <h1>{{ entry.field('title') }}</h1>
+        <div class="article-body">
+            {{ entry.field('body')|markdown }}
+        </div>
+    </div>
+</section>
+{% endblock %}

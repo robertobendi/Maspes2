@@ -1,13 +1,7 @@
-{% extends '@theme/layout.twig' %}
-{% set meta_description = entry.field('meta_description') %}
-
-{% block title %}{{ entry.field('title') }} · {{ site.name }}{% endblock %}
-
-{% block content %}
-<article class="wrap">
-    <h1>{{ entry.field('title') }}</h1>
-    <div class="article-body">
-        {{ entry.field('body')|markdown }}
-    </div>
-</article>
-{% endblock %}
+{# page.twig dispatches by entry slug to a bespoke template. Twig tries each
+   in order and uses the first that exists, so we look for a page-<slug>.twig
+   first and fall back to the generic article renderer. #}
+{% extends [
+    '@theme/page-' ~ entry.slug ~ '.twig',
+    '@theme/_page-default.twig'
+] %}

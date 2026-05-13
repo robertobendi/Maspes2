@@ -1,17 +1,28 @@
 {% extends '@theme/layout.twig' %}
 
-{% block title %}{{ ok ? 'Thanks' : 'Try again' }} · {{ site.name }}{% endblock %}
+{% block title %}{{ ok ? 'Grazie' : 'Riprova' }} — Maspes Piante e Fiori{% endblock %}
 
 {% block content %}
-<div class="wrap" style="text-align:center;padding:4rem 0;">
-    {% if ok %}
-        <h1>Thanks for getting in touch.</h1>
-        <p class="lede">We received your message.</p>
-    {% else %}
-        <h1>Something went wrong.</h1>
-        <ul style="display:inline-block;text-align:left;">
-            {% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
-        <p style="margin-top:2rem;"><a href="javascript:history.back()">← Go back</a></p>
-    {% endif %}
-</div>
+<section class="article">
+    <div class="container narrow" style="text-align: center;">
+        {% if ok %}
+            <p class="eyebrow on-light">Ricevuto</p>
+            <h1>Grazie, vi ricontattiamo a breve.</h1>
+            <p style="color: var(--ink-carbone-soft); max-width: 44ch; margin: 1rem auto 2rem;">Rispondiamo entro il giorno lavorativo successivo. Per urgenze, chiamateci direttamente.</p>
+            <p><a href="/" class="btn btn-secondary">Torna alla home <span class="arrow" aria-hidden="true">→</span></a></p>
+            <p style="margin-top: 2rem;">
+                <a href="tel:+39031271136" class="link-brass">031 27 11 36 →</a>
+            </p>
+        {% else %}
+            <p class="eyebrow on-light">Errore</p>
+            <h1>Qualcosa è andato storto.</h1>
+            {% if errors %}
+            <ul style="display:inline-block; text-align:left; color: var(--granata); list-style: none; padding: 0;">
+                {% for e in errors %}<li>· {{ e }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            <p style="margin-top:2rem;"><a href="javascript:history.back()" class="link-brass">← Torna indietro</a></p>
+        {% endif %}
+    </div>
+</section>
 {% endblock %}

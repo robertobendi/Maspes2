@@ -1,0 +1,115 @@
+{% extends '@theme/layout.twig' %}
+
+{% set active_page = 'visitaci' %}
+
+{% block title %}Visitaci — Via Leone Leoni 2, Como — Maspes Piante e Fiori{% endblock %}
+{% block meta_description %}Via Leone Leoni 2, 22100 Como — il negozio di Maspes Piante e Fiori. Orari, indicazioni, telefono e contatti.{% endblock %}
+
+{% block content %}
+
+{# ============================== HERO ============================== #}
+<section class="hero-editorial">
+    <div class="container">
+        <p class="eyebrow on-dark">Posizione</p>
+        <h1>Via Leone Leoni 2, Como.</h1>
+        <div class="rule-mark" aria-hidden="true">
+            <span class="line"></span>
+            <span class="mark">
+                <svg width="32" height="40" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M2 47V20a18 18 0 0 1 36 0v27" stroke-linecap="round"/>
+                    <path d="M20 2v45M2 32h36" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="line"></span>
+        </div>
+        <p>La famiglia Maspes apre il negozio in centro a Como nel 1954. Da allora, Corrado e i suoi sono gli stessi che vi accolgono dietro al banco di lavoro, ogni mattina.</p>
+    </div>
+</section>
+
+{# ============================== MAP ============================== #}
+<figure class="map-block surface-bosco" aria-label="Mappa — Via Leone Leoni 2, Como">
+    <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=9.0767%2C45.8030%2C9.0967%2C45.8130&amp;layer=mapnik&amp;marker=45.8080%2C9.0867"
+        title="Mappa di Via Leone Leoni 2, Como"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</figure>
+
+{# ============================== INDIRIZZO + CONTATTI ============================== #}
+<section class="section surface-avorio">
+    <div class="container">
+        <div class="visit-grid">
+            <div>
+                <p class="eyebrow on-light">Indirizzo</p>
+                <address class="addr">
+                    Maspes Piante e Fiori<br>
+                    Via Leone Leoni, 2<br>
+                    22100 Como (CO)
+                </address>
+                <p class="meta">Nel cuore di Como, a due passi da Piazza Volta.</p>
+                <p style="margin-top: 2rem;">
+                    <a href="https://www.openstreetmap.org/?mlat=45.8080&amp;mlon=9.0867#map=17/45.8080/9.0867"
+                       target="_blank" rel="noopener" class="btn btn-secondary">Apri in mappe <span class="arrow" aria-hidden="true">→</span></a>
+                </p>
+            </div>
+            <div class="contacts">
+                <p class="eyebrow on-light">Contatti</p>
+                <div class="row">
+                    <span class="label">Telefono</span>
+                    <span class="big"><a href="tel:+39031271136">031 27 11 36</a></span>
+                </div>
+                <div class="row">
+                    <span class="label">Email</span>
+                    <a href="mailto:info@maspespiantefiori.it">info@maspespiantefiori.it</a>
+                </div>
+                <div class="row">
+                    <span class="label">PEC</span>
+                    <a href="mailto:maspespiantefiori@pecpostasicura.it">maspespiantefiori@pecpostasicura.it</a>
+                </div>
+                <div class="row">
+                    <span class="label">Partita IVA</span>
+                    <span style="font-variant-numeric: tabular-nums;">01558540132</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============================== ORARI ============================== #}
+<section class="section surface-avorio-2 compact">
+    <div class="container">
+        <div class="visit-grid">
+            <div>
+                <p class="eyebrow on-light">Orari</p>
+                <h2>Aperti sette giorni su sette.</h2>
+                <p style="color: var(--ink-carbone-soft); max-width: 38ch;">Per i lavori più importanti — un matrimonio, un'occasione su misura — vi consigliamo sempre di chiamare prima così possiamo dedicarvi il tempo che serve.</p>
+            </div>
+            <div>
+                {% set today = "now"|date('N') %}
+                <ul class="hours" aria-label="Orari di apertura">
+                    <li{% if today == '1' %} class="today"{% endif %}><span class="day">Lunedì</span><span class="time">8:00–13:00 · 15:00–19:30</span></li>
+                    <li{% if today == '2' %} class="today"{% endif %}><span class="day">Martedì</span><span class="time">8:00–13:00 · 15:00–19:30</span></li>
+                    <li{% if today == '3' %} class="today"{% endif %}><span class="day">Mercoledì</span><span class="time">8:00–13:00 · 14:30–19:30</span></li>
+                    <li{% if today == '4' %} class="today"{% endif %}><span class="day">Giovedì</span><span class="time">8:00–13:00 · 15:00–19:30</span></li>
+                    <li{% if today == '5' %} class="today"{% endif %}><span class="day">Venerdì</span><span class="time">8:00–13:00 · 15:00–19:30</span></li>
+                    <li{% if today == '6' %} class="today"{% endif %}><span class="day">Sabato</span><span class="time">8:00–13:00 · 14:30–19:30</span></li>
+                    <li{% if today == '7' %} class="today"{% endif %}><span class="day">Domenica</span><span class="time">9:00–13:00</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============================== INDICAZIONI CTA ============================== #}
+<section class="section surface-bosco compact">
+    <div class="container">
+        <div class="closing-band">
+            <p class="eyebrow on-dark">Vi aspettiamo</p>
+            <h2 style="color: var(--avorio);">Un caffè, un consiglio, un fiore.</h2>
+            <a href="https://www.openstreetmap.org/?mlat=45.8080&amp;mlon=9.0867#map=17/45.8080/9.0867"
+               target="_blank" rel="noopener" class="btn btn-primary">Apri in mappe <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -4,8 +4,8 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Maspes Piante e Fiori — Fiori di Como, dal 1954{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Maspes Piante e Fiori — atelier floreale di Como dal 1954. Rose, orchidee, composizioni su misura. Consegna a Como e provincia. Via Leone Leoni 2 · 031 27 11 36.{% endblock %}">
+    <title>Composizioni — Maspes Piante e Fiori</title>
+    <meta name="description" content="Le composizioni Maspes: rose, piante, bouquet e orchidee. Ogni pezzo è realizzato a mano in negozio a Como. Chiama lo 031 27 11 36 per ordinare.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -943,23 +943,21 @@
             h1 { letter-spacing: -0.02em; }
         }
     </style>
-    {% block head %}{% endblock %}
-</head>
+    </head>
 <body>
-    <a class="skip-link" href="#main">Vai al contenuto</a>
+    <a class="skip-link" href="composizioni.html#main">Vai al contenuto</a>
 
-    {# Header sits over the hero on the homepage (transparent) and is solid on inner pages. #}
-    <header class="site-header {% block header_class %}solid{% endblock %}">
+        <header class="site-header solid">
         <div class="container">
-            <a href="/" class="wordmark" aria-label="Maspes Piante e Fiori — Homepage">
+            <a href="index.html" class="wordmark" aria-label="Maspes Piante e Fiori — Homepage">
                 <span class="name">Maspes</span>
                 <span class="rule" aria-hidden="true"></span>
                 <span class="est">Est. 1954</span>
             </a>
             <nav class="primary-nav" aria-label="Navigazione principale">
-                <a href="/composizioni"{% if active_page == 'composizioni' %} aria-current="page"{% endif %}>Composizioni</a>
-                <a href="/su-misura"{% if active_page == 'su-misura' %} aria-current="page"{% endif %}>Su Misura</a>
-                <a href="/visitaci"{% if active_page == 'visitaci' %} aria-current="page"{% endif %}>Visitaci</a>
+                <a href="composizioni.html" aria-current="page">Composizioni</a>
+                <a href="su-misura.html">Su Misura</a>
+                <a href="visitaci.html">Visitaci</a>
                 <a href="tel:+39031271136" class="nav-cta">Chiamaci&nbsp;<span class="num">&nbsp;031&nbsp;27&nbsp;11&nbsp;36</span></a>
             </nav>
             <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" id="menu-toggle">
@@ -971,7 +969,7 @@
 
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
         <div class="mobile-menu-head">
-            <a href="/" class="wordmark">
+            <a href="index.html" class="wordmark">
                 <span class="name">Maspes</span>
                 <span class="rule" aria-hidden="true"></span>
                 <span class="est">Est. 1954</span>
@@ -982,9 +980,9 @@
             </button>
         </div>
         <nav class="mobile-menu-body" aria-label="Navigazione mobile">
-            <a href="/composizioni">Composizioni</a>
-            <a href="/su-misura">Su Misura</a>
-            <a href="/visitaci">Visitaci</a>
+            <a href="composizioni.html">Composizioni</a>
+            <a href="su-misura.html">Su Misura</a>
+            <a href="visitaci.html">Visitaci</a>
         </nav>
         <div class="mobile-menu-foot">
             <a href="tel:+39031271136" class="btn btn-primary">Chiamaci 031 27 11 36</a>
@@ -993,7 +991,163 @@
     </div>
 
     <main id="main">
-        {% block content %}{% endblock %}
+        
+<section class="hero-editorial">
+    <div class="container">
+        <p class="eyebrow on-dark">Le composizioni</p>
+        <h1>Ogni fiore, una scelta.</h1>
+        <div class="rule-mark" aria-hidden="true">
+            <span class="line"></span>
+            <span class="mark">
+                <svg width="32" height="40" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M2 47V20a18 18 0 0 1 36 0v27" stroke-linecap="round"/>
+                    <path d="M20 2v45M2 32h36" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="line"></span>
+        </div>
+        <p>La lista che segue è una piccola parte di ciò che facciamo: rose tagliate fresche ogni mattina, piante scelte una a una, bouquet pensati per la persona che li riceverà. Per qualsiasi composizione fuori catalogo, chiamate il negozio.</p>
+    </div>
+</section>
+
+<section class="surface-bosco" style="padding: 2.5rem 0;">
+    <div class="container">
+        <nav class="filter-row" aria-label="Filtri composizioni">
+            <a href="composizioni.html#tutti" aria-current="page">Tutti</a>
+            <a href="composizioni.html#rose">Rose</a>
+            <a href="composizioni.html#piante">Piante</a>
+            <a href="composizioni.html#bouquet">Bouquet</a>
+            <a href="composizioni.html#orchidee">Orchidee</a>
+            <a href="composizioni.html#composizioni">Composizioni</a>
+        </nav>
+    </div>
+</section>
+
+<section class="surface-bosco" style="padding-bottom: var(--sec-lg);">
+    <div class="container">
+        <div class="compo-grid">
+                            <article class="item reveal" id="rose-100-rose-rosse">
+                    <div class="frame">
+                        <img src="uploads/hero/wet_rose_bouquet__unsplash__jpg.jpg"
+                             alt="Bouquet imponente di rose rosse a stelo lungo su sfondo scuro, dettaglio macro."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">100 Rose Rosse</h2>
+                    <span class="price">
+                        €700                    </span>
+                                            <p class="descr">La nostra composizione signature. Cento rose a stelo lungo, selezionate la mattina stessa, legate a mano in negozio. Su prenotazione, consegna garantita a Como.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="rose-24-rose-rosse">
+                    <div class="frame">
+                        <img src="uploads/hero/crimson_bouquet__50703702043__jpg.jpg"
+                             alt="Rosa rossa aperta in primo piano, dettaglio macro su sfondo scuro."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">24 Rose Rosse</h2>
+                    <span class="price">
+                        €168                    </span>
+                                            <p class="descr">Due dozzine di rose rosse: il gesto classico, ma fatto bene. Selezione di stelo, confezione bassa o alta a scelta, consegna in giornata.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="rose-12-rose-rosse">
+                    <div class="frame">
+                        <img src="uploads/composizioni/close_up_of_red_rose_in_brooklyn_botanic_garden_jpg.jpg"
+                             alt="Roseto di rose rosse aperte, fotografate in luce naturale."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">12 Rose Rosse</h2>
+                    <span class="price">
+                        €84                    </span>
+                                            <p class="descr">La dozzina che non sbaglia mai. Dodici rose rosse a stelo lungo, confezione in carta naturale o ribbon Maspes.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="rose-9-rose-rosse">
+                    <div class="frame">
+                        <img src="uploads/composizioni/red_rose_flower_close_up_jpg.jpg"
+                             alt="Rosa scura aperta su sfondo nero, dettaglio macro con gocce di rugiada."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">9 Rose Rosse</h2>
+                    <span class="price">
+                        €63                    </span>
+                                            <p class="descr">Nove rose. Una proporzione gentile, più discreta della dozzina, ugualmente carica. Da regalare senza occasione.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="rose-6-rose-rosse">
+                    <div class="frame">
+                        <img src="uploads/composizioni/a_close_up_of_climbing_roses_jpg.jpg"
+                             alt="Rose rosse rampicanti in piena fioritura, primo piano."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">6 Rose Rosse</h2>
+                    <span class="price">
+                        €42                    </span>
+                                            <p class="descr">Sei rose. Per un grazie, per un mi sei mancato, per arrivare a casa portando qualcosa.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="orchidee-orchidea-phalaenopsis">
+                    <div class="frame">
+                        <img src="uploads/composizioni/phalaenopsis_white_cultivar_2_jpg.jpg"
+                             alt="Orchidea bianca Phalaenopsis con felci sullo sfondo."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">Orchidea Phalaenopsis</h2>
+                    <span class="price">
+                        Da €38                    </span>
+                                            <p class="descr">Orchidea Phalaenopsis bianca o screziata, una o due aste. Pianta da interno di lunga durata, perfetta per un regalo di rappresentanza.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="piante-pianta-da-interno">
+                    <div class="frame">
+                        <img src="uploads/composizioni/orchid_2021_001_phalaenopsis_amabilis_blume_jpg.jpg"
+                             alt="Orchidea bianca in vaso di ceramica brunita, illuminata da luce calda laterale."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">Orchidea in coppo</h2>
+                    <span class="price">
+                        Da €55                    </span>
+                                            <p class="descr">Una piccola orchidea presentata nel suo vaso di ceramica, scelta una a una. Per chi vuole un regalo che resti — non solo l&#039;istante.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="bouquet-bouquet-vivace">
+                    <div class="frame">
+                        <img src="uploads/composizioni/mixed_flower_power_jpg.jpg"
+                             alt="Bouquet vivace con rose arancio, gerbera e felci, in vaso di vetro."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">Bouquet Vivace</h2>
+                    <span class="price">
+                        Da €30                    </span>
+                                            <p class="descr">Bouquet di stagione, composto in negozio con i fiori del giorno. Colori e proporzioni li decidiamo insieme.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                            <article class="item reveal" id="bouquet-bouquet-autore">
+                    <div class="frame">
+                        <img src="uploads/composizioni/anna_maria_janssens_or_jan_brueghel_the_younger__workshop___.jpg"
+                             alt="Bouquet in stile fiammingo, peonie, lilium e tulipani, su fondo scuro."
+                             loading="lazy" decoding="async">
+                    </div>
+                    <h2 class="name">Bouquet d&#039;autore</h2>
+                    <span class="price">
+                        Da €120                    </span>
+                                            <p class="descr">Bouquet di grande formato, costruito attorno a una varietà di stagione: peonie, lisianthus, lilium. Per cene, presentazioni, lobby di hotel.</p>
+                                        <a class="cta" href="tel:+39031271136">Chiama per ordinare <span aria-hidden="true">→</span></a>
+                </article>
+                    </div>
+    </div>
+</section>
+
+<section class="section surface-bosco compact" style="border-top: 1px solid var(--rule-bosco);">
+    <div class="container">
+        <div class="closing-band">
+            <p class="eyebrow on-dark">Non trovi quello che cerchi?</p>
+            <h2 style="color: var(--avorio);">Lo facciamo per te. Composizione su misura, mano nostra.</h2>
+            <a href="su-misura.html" class="btn btn-secondary">Composizioni su misura <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -1036,13 +1190,13 @@
                         Sede legale: Via Leone Leoni 2, 22100 Como
                     </p>
                     <p style="margin-top:1rem;">
-                        <a href="/visitaci">Indirizzo &amp; orari</a><br>
-                        <a href="/su-misura">Composizioni su misura</a>
+                        <a href="visitaci.html">Indirizzo &amp; orari</a><br>
+                        <a href="su-misura.html">Composizioni su misura</a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© {{ "now"|date('Y') }} Maspes Piante e Fiori. Tutti i diritti riservati.</span>
+                <span>© 2026 Maspes Piante e Fiori. Tutti i diritti riservati.</span>
                 <ul class="social">
                     <li>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">

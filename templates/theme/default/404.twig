@@ -1,11 +1,19 @@
 {% extends '@theme/layout.twig' %}
 
-{% block title %}Not found · {{ site.name }}{% endblock %}
+{% block title %}Pagina non trovata — Maspes Piante e Fiori{% endblock %}
 
 {% block content %}
-<div class="wrap empty-state">
-    <h1>404</h1>
-    <p class="lede">That page doesn’t exist — or has been moved.</p>
-    <p><a href="/">Go home →</a></p>
-</div>
+<section class="article">
+    <div class="container narrow" style="text-align: center;">
+        <p class="eyebrow on-light">404</p>
+        <h1>Questa pagina non esiste.</h1>
+        <p style="color: var(--ink-carbone-soft); margin: 1rem auto 2rem; max-width: 44ch;">Forse l'indirizzo è cambiato, o forse è meglio chiamarci direttamente — facciamo prima.</p>
+        <p>
+            <a href="/" class="btn btn-secondary">Torna alla home <span class="arrow" aria-hidden="true">→</span></a>
+        </p>
+        <p style="margin-top: 2rem;">
+            <a href="tel:+39031271136" class="link-brass">Oppure chiama 031 27 11 36 →</a>
+        </p>
+    </div>
+</section>
 {% endblock %}

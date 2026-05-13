@@ -4,8 +4,8 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Maspes Piante e Fiori — Fiori di Como, dal 1954{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Maspes Piante e Fiori — atelier floreale di Como dal 1954. Rose, orchidee, composizioni su misura. Consegna a Como e provincia. Via Leone Leoni 2 · 031 27 11 36.{% endblock %}">
+    <title>Maspes Piante e Fiori — Fiori di Como, dal 1954</title>
+    <meta name="description" content="Maspes Piante e Fiori — atelier floreale di Como dal 1954. Rose, orchidee, composizioni su misura. Consegna a Como e provincia. Via Leone Leoni 2 · 031 27 11 36.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -943,23 +943,21 @@
             h1 { letter-spacing: -0.02em; }
         }
     </style>
-    {% block head %}{% endblock %}
-</head>
+    </head>
 <body>
-    <a class="skip-link" href="#main">Vai al contenuto</a>
+    <a class="skip-link" href="index.html#main">Vai al contenuto</a>
 
-    {# Header sits over the hero on the homepage (transparent) and is solid on inner pages. #}
-    <header class="site-header {% block header_class %}solid{% endblock %}">
+        <header class="site-header ">
         <div class="container">
-            <a href="/" class="wordmark" aria-label="Maspes Piante e Fiori — Homepage">
+            <a href="index.html" class="wordmark" aria-label="Maspes Piante e Fiori — Homepage">
                 <span class="name">Maspes</span>
                 <span class="rule" aria-hidden="true"></span>
                 <span class="est">Est. 1954</span>
             </a>
             <nav class="primary-nav" aria-label="Navigazione principale">
-                <a href="/composizioni"{% if active_page == 'composizioni' %} aria-current="page"{% endif %}>Composizioni</a>
-                <a href="/su-misura"{% if active_page == 'su-misura' %} aria-current="page"{% endif %}>Su Misura</a>
-                <a href="/visitaci"{% if active_page == 'visitaci' %} aria-current="page"{% endif %}>Visitaci</a>
+                <a href="composizioni.html">Composizioni</a>
+                <a href="su-misura.html">Su Misura</a>
+                <a href="visitaci.html">Visitaci</a>
                 <a href="tel:+39031271136" class="nav-cta">Chiamaci&nbsp;<span class="num">&nbsp;031&nbsp;27&nbsp;11&nbsp;36</span></a>
             </nav>
             <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" id="menu-toggle">
@@ -971,7 +969,7 @@
 
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
         <div class="mobile-menu-head">
-            <a href="/" class="wordmark">
+            <a href="index.html" class="wordmark">
                 <span class="name">Maspes</span>
                 <span class="rule" aria-hidden="true"></span>
                 <span class="est">Est. 1954</span>
@@ -982,9 +980,9 @@
             </button>
         </div>
         <nav class="mobile-menu-body" aria-label="Navigazione mobile">
-            <a href="/composizioni">Composizioni</a>
-            <a href="/su-misura">Su Misura</a>
-            <a href="/visitaci">Visitaci</a>
+            <a href="composizioni.html">Composizioni</a>
+            <a href="su-misura.html">Su Misura</a>
+            <a href="visitaci.html">Visitaci</a>
         </nav>
         <div class="mobile-menu-foot">
             <a href="tel:+39031271136" class="btn btn-primary">Chiamaci 031 27 11 36</a>
@@ -993,7 +991,144 @@
     </div>
 
     <main id="main">
-        {% block content %}{% endblock %}
+        
+<section class="hero-split" aria-label="Maspes Piante e Fiori — Fiori di Como, dal 1954">
+    <div class="photo" aria-hidden="true">
+        <img src="uploads/hero/wet_rose_bouquet__unsplash__jpg.jpg"
+             alt=""
+             loading="eager"
+             decoding="async">
+    </div>
+    <div class="copy">
+        <p class="eyebrow on-dark">Atelier floreale · Como</p>
+        <h1 class="display">Fiori di&nbsp;Como, dal&nbsp;1954.</h1>
+        <p class="subhead">Tre generazioni della famiglia Maspes a Via Leone Leoni. Rose, orchidee, composizioni su misura — consegna a Como e provincia.</p>
+        <div class="cta-row">
+            <a href="tel:+39031271136" class="btn btn-primary">Chiamaci<span class="arrow" aria-hidden="true">→</span></a>
+            <span class="phone-line"><a href="tel:+39031271136">031 27 11 36</a></span>
+        </div>
+    </div>
+    <div class="hero-rule" aria-hidden="true">
+        <span class="line"></span>
+        <span class="mark">
+                        <svg width="40" height="48" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M2 47V20a18 18 0 0 1 36 0v27" stroke-linecap="round"/>
+                <path d="M20 2v45M2 32h36" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span class="line"></span>
+    </div>
+</section>
+
+<section class="section surface-avorio">
+    <div class="container">
+        <div class="split-50">
+            <div class="copy reveal">
+                <p class="eyebrow on-light">Dal 1954</p>
+                <h2>Tre generazioni dietro lo stesso banco.</h2>
+                <p>Maspes Piante e Fiori apre in Via Leone Leoni nel 1954. Da allora le mani sono cambiate — il mestiere no. Selezioniamo ogni fiore con cura, raccontiamo ogni composizione, e siamo per i clienti di Como il fiorista di fiducia da settant'anni.</p>
+                <p>Veniteci a trovare in negozio o telefonate: per i lavori più importanti preferiamo sempre prima ascoltarvi.</p>
+                <p><a class="link-brass" href="visitaci.html">Visitaci a Como <span aria-hidden="true">→</span></a></p>
+            </div>
+            <div class="photo reveal">
+                <img src="uploads/composizioni/dark_rose_close_up_jpg.jpg"
+                     alt="Petali di rosa scuri fotografati in penombra — dettaglio di una composizione Maspes."
+                     loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section surface-bosco">
+    <div class="container">
+        <p class="eyebrow on-dark center">Le nostre composizioni</p>
+        <h2 class="center" style="max-width: 22ch; margin-inline: auto;">Tre famiglie di lavori, una sola misura: la cura.</h2>
+        <div class="three-up">
+            <a class="card reveal" href="composizioni.html">
+                <div class="frame"><img
+                    src="uploads/hero/crimson_bouquet__50703702043__jpg.jpg"
+                    alt="Rosa rossa aperta, dettaglio macro su sfondo verde scuro."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Rose</span>
+                <h3>Rose rosse, da una a cento.</h3>
+                <span class="vedi">Vedi le rose <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a class="card offset reveal" href="composizioni.html">
+                <div class="frame"><img
+                    src="uploads/composizioni/orchid_2021_001_phalaenopsis_amabilis_blume_jpg.jpg"
+                    alt="Orchidea Phalaenopsis bianca in un vaso di terracotta brunita."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Piante</span>
+                <h3>Orchidee &amp; piante da interno.</h3>
+                <span class="vedi">Vedi le piante <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a class="card reveal" href="composizioni.html">
+                <div class="frame"><img
+                    src="uploads/composizioni/anna_maria_janssens_or_jan_brueghel_the_younger__workshop___.jpg"
+                    alt="Bouquet misto in stile fiammingo, peonie, lilium e tulipani, fotografato su sfondo scuro."
+                    loading="lazy" decoding="async"></div>
+                <span class="meta">Bouquet</span>
+                <h3>Bouquet d'autore.</h3>
+                <span class="vedi">Vedi i bouquet <span class="arrow" aria-hidden="true">→</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section surface-avorio compact" aria-label="Composizioni su misura">
+    <div class="container">
+        <div class="teaser-wide">
+            <div class="photo reveal">
+                <img src="uploads/wedding/church_on_the_morning_of_the_wedding__unsplash__jpg.jpg"
+                     alt="Bouquet preparato a mano poggiato su una panca in legno scuro — atmosfera intima di chiesa." loading="lazy" decoding="async">
+            </div>
+            <div class="copy reveal">
+                <p class="eyebrow on-light">Su misura</p>
+                <h2>Per il giorno che conta, una composizione pensata per voi.</h2>
+                <p>Matrimoni, eventi, hotel, ristoranti. Ascoltiamo l'occasione, disegniamo la proposta, consegniamo a Como e provincia.</p>
+                <a href="su-misura.html" class="btn btn-secondary">Richiedi una composizione <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section surface-bosco">
+    <div class="container">
+        <p class="eyebrow on-dark center">Dicono di noi</p>
+        <h2 class="center" style="max-width:20ch; margin-inline:auto;">Le parole dei clienti.</h2>
+        <div class="testimonials">
+            <blockquote class="testimonial reveal">
+                <p>Il fiorista top di Como. Se volete la qualità, sia per richieste particolari che per una semplice rosa andate da Corrado: non vi deluderà.</p>
+                <cite>— Jacopo Zuppati</cite>
+            </blockquote>
+            <blockquote class="testimonial reveal">
+                <p>Fiori di rara bellezza e qualità. Personale gentilissimo.</p>
+                <cite>— Barbara Bertolini</cite>
+            </blockquote>
+            <blockquote class="testimonial reveal">
+                <p>Grande, grandissima professionalità e composizioni bellissime e raffinate.</p>
+                <cite>— Chiara Vincenzi</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="section surface-avorio compact">
+    <div class="container">
+        <div class="visit-strip">
+            <div class="info">
+                <p class="eyebrow on-light">Posizione</p>
+                <h2>Via Leone Leoni 2, Como.</h2>
+                <p class="addr">Aperti oggi e tutti i giorni della settimana.</p>
+                <p class="today">Telefono: <strong><a href="tel:+39031271136" class="link-brass">031 27 11 36</a></strong></p>
+            </div>
+            <div class="cta-side">
+                <a href="visitaci.html" class="btn btn-primary">Indicazioni <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -1036,13 +1171,13 @@
                         Sede legale: Via Leone Leoni 2, 22100 Como
                     </p>
                     <p style="margin-top:1rem;">
-                        <a href="/visitaci">Indirizzo &amp; orari</a><br>
-                        <a href="/su-misura">Composizioni su misura</a>
+                        <a href="visitaci.html">Indirizzo &amp; orari</a><br>
+                        <a href="su-misura.html">Composizioni su misura</a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© {{ "now"|date('Y') }} Maspes Piante e Fiori. Tutti i diritti riservati.</span>
+                <span>© 2026 Maspes Piante e Fiori. Tutti i diritti riservati.</span>
                 <ul class="social">
                     <li>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
